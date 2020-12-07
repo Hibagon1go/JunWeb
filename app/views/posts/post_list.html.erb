@@ -1,0 +1,19 @@
+<div class=post_list_title><h1>じゅんじゅんの投稿一覧~</h1></div>
+<% @posts.each do |post| %>
+  <br>
+  <div class=post_wrapper>
+  <div class=post_title><h2><%=post.title%></h2><p>投稿日時:<%=post.created_at%></p></div>
+  <div class=post_explanation>
+  <h3><%=post.explanation.html_safe%></h3>
+  <% title=post.title%>
+  <% url=post.id.to_s%>
+  <%=link_to("この記事を読む", "/posts/"+url)%> 
+  <% if logged_in? %>
+  <%=link_to("この記事を削除する", "/posts/"+url, method: :delete)%>
+  <% end %>
+  <!--ログインしていたら削除するためのチェックボックスを表示--> 
+  </br>
+  </div>
+  </div>
+<% end %>
+<!--ログインしていたら下の方に削除するボタン-->

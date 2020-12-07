@@ -1,0 +1,4 @@
+<div class=post_show_title><h3>~記事タイトル~</h3><h1> <%= @post.title %></h1><p>投稿日時:<%=@post.created_at%></p></div>
+<div class=post_show_content>
+<%= @post.text.html_safe %>
+</div>

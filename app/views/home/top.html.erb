@@ -1,0 +1,94 @@
+<body>
+<div id="wrapper">
+	<!-- メイン画像 -->
+	<div id="mainBanner" class="mainImg">
+    　　 <img src="/IMG_5319.JPG" alt="">
+        <!--<img src="/IMG_5294.JPG" alt="">-->
+        <div class="introduce">
+          <p>ヴァイオリン音大生の野上純です。よろしく!!</p>
+        </div>
+    </div>
+    
+    <section class="gridWrapper">
+        <div class="latest">
+        <p>~~新着情報(New Information)~~</p>
+        </div>
+		<article class="grid">
+		    <% if !@posts.first.nil? %>
+			<h3>新着投稿(NEW POST!)<br>タイトル:<%= @posts.first.title%></br></h3>
+			<!--<img src="images/eyecatch1.jpg" width="220" height="175" alt="">-->			
+            <%= @posts.first.explanation.html_safe%>
+            <%url1 = @posts.first.id.to_s%>
+			<p class="readmore"><%=link_to("この投稿を読む","/posts/"+url1)%></p>
+			<% end %>
+		</article>
+		<article class="grid">
+		    <% if !@posts.last.nil? %>
+			<h3>新着投稿(NEW POST!)<br>タイトル:<%= @posts.last.title%></br></h3>
+			<!--<img src="images/eyecatch2.jpg" width="220" height="175" alt="">-->
+            <%= @posts.last.explanation.html_safe%>
+            <%url2 = @posts.last.id.to_s%>
+			<p class="readmore"><%=link_to("この投稿を読む","/posts/"+url2)%></p>
+			<% end %>
+		</article>
+    </section>      
+
+
+ 
+	<!-- 4カラム -->
+  <!--<section class="gridWrapper">
+		<article class="grid">
+			<h3>新着投稿1</h3>
+			<img src="images/eyecatch1.jpg" width="220" height="175" alt="">			
+			<p>ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。</p>
+			<p class="readmore"><a href="subpage.html">詳細を確認する</a></p>
+		</article>
+		<article class="grid">
+			<h3>新着投稿2</h3>
+			<img src="images/eyecatch2.jpg" width="220" height="175" alt="">
+			<p>ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。</p>
+			<p class="readmore"><a href="subpage.html">詳細を確認する</a></p>
+		</article>
+		<article class="grid">
+            <h3>新着投稿3</h3>
+			<img src="images/eyecatch3.jpg" width="220" height="175" alt="">
+			<p>ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。</p>
+			<p class="readmore"><a href="subpage.html">詳細を確認する</a></p>
+		</article>
+        <article class="grid">
+			<h3>新着投稿4</h3>
+			<img src="images/eyecatch4.jpg" width="220" height="175" alt="">
+			<p>ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。</p>
+			<p class="readmore"><a href="subpage.html">詳細を確認する</a></p>
+		</article>
+	</section>
+	<!- / 4カラム -->
+    <section class="profile">
+		<h3 class="heading">プロフィール(Profile)</h3>
+		<article>
+			<!--<img src="/IMG_5294.JPG" width="320" height="240" alt="" class="alignleft frame">-->
+	    <li>1999年5月18日生まれ</li>
+        <li>2015年4月呉羽高校入学(33期)</li>
+        <li>2018年3月呉羽高校普通科音楽コース卒業</li>
+        <li>2018年4月桐朋学園大学音楽学部音楽学科弦楽器専攻入学</li>
+		</article>
+	</section>
+
+
+	<section class="content">
+		<h3 class="heading">ごあいさつ(Greeting)</h3>
+		<article>
+			<img src="/IMG_5294.JPG" width="320" height="240" alt="" class="alignleft frame">
+ 　　　　　　 <p>改めましてこんにちは!!(or こんばんは!!) 現在大学でバイオリンを専攻しております、名を野上純と申します。</p>
+            <p>日々バイオリンの練習を頑張ったりしている、そんな音大生の日常を徒然なるままに書きつくる個人ブログです。興味がある方は見てもらえると幸いです!</p>
+			<p>演奏/お仕事の依頼などは下記のE-mailまたはSNSからご連絡お願い致します。</p>
+		 　　<p>Hello everyone!! I'm Jun Nogami, now I major in music, especially practice the violin in my college. </p>
+            <p>This is a personal website for writing down my daily life, revolves around the violin. I'd appreciate it if you would get interested in it and take a look at it!</p>
+			<p>Please contact me via E-mail(adress is below) or SNS.</p>
+		</article>
+	</section>
+
+</div>
+<!-- / WRAPPER -->
+</body>
+</html>

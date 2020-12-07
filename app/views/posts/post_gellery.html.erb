@@ -1,0 +1,10 @@
+<!--ログイン確認して-->
+<% if logged_in?%>
+<%= form_tag('/posts/create', method: :post) do %>
+    <h3>投稿する</h3>
+    <input type="text" name="title">
+    <textarea cols="30" name="explanation" rows="10"></textarea>
+    <textarea cols="60" name="text" rows="30"></textarea>
+    <input type="submit" value="投稿する">
+ <% end %>
+ <% end %>

@@ -1,0 +1,14 @@
+<!--ログイン確認して-->
+<% if logged_in?%>
+<%= form_for(@posts, :url => {:controller => 'posts', :action => 'create'}) do |f| %>
+  <br><%= f.label :タイトル %>
+  <%= f.text_area :title %> 
+  </br>
+  <br><%= f.label :内容の簡単な説明、ただし動画or画像を入れる場合、ハテナの左のボタンを押して変な画面でたらwidthとheightの値をそれぞれスマホなら160と90に変更して、また同じボタンを押してね%>
+  <%= f.text_area :explanation, 'data-provider': :summernote %> 
+  </br>
+  <%= f.label :本文、ただし動画or画像を入れる場合、ハテナの左のボタンを押して変な画面でたらwidthとheightの値をそれぞれ320と180に変更して、また同じボタンを押してね%>
+  <%= f.text_area :text, 'data-provider': :summernote %> 
+  <%= f.submit "投稿する" %>
+<% end %>
+<% end %>
