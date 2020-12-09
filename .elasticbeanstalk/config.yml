@@ -1,0 +1,10 @@
+branch-defaults:
+  master:
+    environment: Junweb-env
+global:
+  application_name: JunWeb
+  default_region: ap-northeast-1
+  include_git_submodules: true
+  sc: git
+  workspace_type: Application
+  profile: Hibagon 

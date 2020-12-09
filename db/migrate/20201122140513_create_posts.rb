@@ -3,8 +3,8 @@ class CreatePosts < ActiveRecord::Migration[5.2]
     create_table :posts do |t|
      
       t.string :title
-      t.text :explanation
-      t.text :text
+      t.text :explanation, limit: 4294967295
+      t.text :text, limit: 4294967295
       t.timestamps
     end
   end
