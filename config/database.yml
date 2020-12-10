@@ -9,7 +9,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: production
-  username: root
+  username: Hibagon
   password: Yotto0416
   timeout: 5000
 
@@ -30,5 +30,5 @@ production:
   <<: *default
   port: 3306
   socket: /var/lib/mysql/mysql.sock
-  host: junweb-db.cgsnc36p4iuy.ap-northeast-1.rds.amazonaws.com
+  host: junweb-database.cgsnc36p4iuy.ap-northeast-1.rds.amazonaws.com
   #database: db/production.sqlite3
