@@ -11,11 +11,11 @@ default: &default
   database: production
   username: root
   password: Yotto0416
-  socket: /var/lib/mysql/mysql.sock
   timeout: 5000
 
 development:
   <<: *default
+  socket: /tmp/mysql.sock
   #database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
@@ -23,9 +23,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  socket: /tmp/mysql.sock
   #database: db/test.sqlite3
 
 production:
   <<: *default
   port: 3306
+  socket: /var/lib/mysql/mysql.sock
+  host: junweb-db.cgsnc36p4iuy.ap-northeast-1.rds.amazonaws.com
   #database: db/production.sqlite3
