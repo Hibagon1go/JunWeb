@@ -1,10 +1,19 @@
 branch-defaults:
   master:
     environment: Junweb-env
+environment-defaults:
+  Junweb-env:
+    branch: master
+    repository: JunWeb
 global:
   application_name: JunWeb
+  default_ec2_keyname: JunWeb
+  default_platform: Ruby 2.7 running on 64bit Amazon Linux 2
   default_region: ap-northeast-1
   include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
   sc: git
   workspace_type: Application
-  profile: Hibagon 
