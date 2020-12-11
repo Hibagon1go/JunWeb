@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: Junweb-env
+    environment: Junweb-env-1
 global:
   application_name: JunWeb
   default_ec2_keyname: JunWeb
