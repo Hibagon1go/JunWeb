@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: Junweb-env
+    environment: Junweb-env-1
 global:
   application_name: JunWeb
   default_platform: Ruby 2.7 running on 64bit Amazon Linux 2
